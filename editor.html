@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>editor</title>
+</head>
+<style>
+.out{
+	width: 80%;
+	margin: 0 auto;
+}
+.title{
+	width:100%;
+	text-align: center;
+}
+.officialdom{
+	margin-top: 30px;
+}
+</style>
+<body>
+	<div class="out">
+		<div class="title"><h1>富文本编辑器编辑内容</h1></div>
+		<div id="editor"></div>
+		<button class="submit">提交内容</button>
+		<div id="getContent" contenteditable="true"></div>
+		<a class="officialdom" href="http://www.wangeditor.com/index.html">wangEditor官网</a>
+	</div>
+</body>
+<script type="text/javascript" src="./editor/wangEditor-3.0.8/release/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('#editor') )
+    editor.create();
+    editor.txt.html('<p>用 JS 设置的内容</p>') //给富文本编辑器设置内容 
+    editor.txt.html() //获取编辑器的内容
+    var submit=document.getElementsByClassName('submit')[0];
+    var content=document.getElementById('getContent');
+    console.log(submit)
+    submit.onclick=function (argument) {
+    	content.innerHTML=editor.txt.html();
+    	alert(editor.txt.html());
+    };
+    
+</script>
+</html>

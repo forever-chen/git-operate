@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示</title>
+</head>
+<style>
+.out{
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
+}
+*{
+	width: 100%;
+}
+</style>
+<body>
+	<div class="out">
+		<h5>
+			1、问题所在：github上的项目怎么在网页中打开呢?
+		</h5>
+		<h5>
+			2、Githubpages提供了这么一个方法展示git项目中的页面。
+		</h5>
+		<p>按照如下四个步骤上传到名为:flexSupplement的仓库中</p>
+		<pre>
+			<code>
+				git init (初始化本地仓库)
+			    git add .  （将本地所有文件加到仓库里）
+			    git commit -m "message" （设置提交信息）
+			    git remote add origin   git@github.com:sunningcarryhaha/flexSupplement.git（本地仓库链接远程仓库）
+			    git push -u origin master （push文件到仓库中）
+			</code>
+		</pre>
+		<h5 style="fontWeight:bold">
+			3、通过Githubpages来实现这么一个功能
+		</h5>
+		<p>1、第一步：找到Settings，点击</p>
+			<img src="./images/sit1.png" alt="">
+		<p>2、找到githubPages点击none,切换到你要显示的分支，save保存</p>
+			<img src="./images/sit2.png" alt="">
+			<img src="./images/sit3.png" alt="">
+		<p>3、保存后出现了连接，点击(链接可能要反应几秒钟的时间)</p>
+			<img src="./images/sit4.png" alt="">
+	</div>
+	
+</body>
+</html>
